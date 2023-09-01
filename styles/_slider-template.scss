@@ -1,0 +1,150 @@
+.slider-container {
+	width: calc((100%) * 22);
+
+	position: absolute;
+	inset: 0;
+
+	transform: translateX(calc((100%) / 22 * -1));
+	transition: transform 0.15s ease-out;
+
+	.slide {
+		border: solid 0 $firstColor;
+		border-width: 0 0.25vw;
+
+		position: relative;
+		background-size: cover;
+		isolation: isolate;
+
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: rgba($color: $firstColor, $alpha: 0.5);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+
+			background: radial-gradient(
+				rgba($color: $firstColor, $alpha: 0.75),
+				transparent
+			);
+			opacity: 0;
+			transition: opacity 0.15s ease-out;
+		}
+
+		.slider-info {
+			height: auto;
+			padding: $mainSectionYPadding;
+			z-index: 1;
+
+			-webkit-text-fill-color: transparent;
+			-webkit-text-stroke-width: 0.3vh;
+			font-size: calc($title * 2);
+			line-height: calc($title * 1.6);
+			text-align: center;
+			text-shadow: $textShadow;
+			transition: opacity, transform 0.15s ease-out;
+		}
+		.slider-title {
+			opacity: 0;
+		}
+		.slider-vote {
+			position: absolute;
+			opacity: 0;
+		}
+	}
+}
+.active-slide {
+	&::before {
+		background: transparent !important;
+	}
+	&:hover {
+		&::after,
+		.slider-vote {
+			opacity: 1;
+		}
+		& .slider-info {
+			font-size: $title;
+			line-height: $title;
+			-webkit-text-fill-color: $thirdColor;
+			-webkit-text-stroke-width: 0;
+		}
+		& .slider-title {
+			transform: translateY(-50%);
+			padding-bottom: 0.5vh;
+		}
+		& .slider-vote {
+			transform: translateY(50%);
+			padding-top: 0.5vh;
+		}
+	}
+	.slider-title {
+		opacity: 1 !important;
+	}
+}
+
+.slider-container:hover ~ .slider-nav {
+	& .slider-arrow {
+		opacity: 1;
+	}
+	& .slider-left {
+		left: calc(($mainSectionXPadding / 2 + 0.5vh) * -1);
+	}
+	& .slider-right {
+		right: calc(($mainSectionXPadding / 2 + 0.5vh) * -1);
+	}
+}
+
+.slider-nav {
+	height: 0.75vh;
+	width: 25%;
+
+	position: absolute;
+	top: calc(
+		($mainSectionYPadding + $sectionTitleHeight / 2) * -1 - 0.75vh / 2
+	);
+	right: 0.25vw;
+	gap: 0.5vh;
+
+	.slider-arrow {
+		height: 100%;
+		width: calc($mainSectionXPadding / 2);
+
+		position: fixed;
+		top: 0;
+
+		font-size: $sectionTitle;
+		opacity: 0;
+		transition: opacity 0.15s ease-out, left 0.15s ease-out,
+			right 0.15s ease-out;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.slider-left {
+		left: calc($mainSectionXPadding / 2 * -1);
+
+		&:hover {
+			left: calc(($mainSectionXPadding / 2 + 0.5vh) * -1);
+		}
+	}
+	.slider-right {
+		right: calc($mainSectionXPadding / 2 * -1);
+
+		&:hover {
+			right: calc(($mainSectionXPadding / 2 + 0.5vh) * -1);
+		}
+	}
+	.slider-btn {
+		background-color: rgba($color: $thirdColor, $alpha: 0.25);
+		cursor: pointer;
+
+		&[data-active],
+		&:hover {
+			background-color: $thirdColor;
+		}
+	}
+}

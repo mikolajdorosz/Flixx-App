@@ -1,0 +1,43 @@
+footer.content-container {
+	height: 100vh;
+
+	flex-direction: column;
+	color: $secondColor;
+
+	h1#footer-logo {
+		margin-top: $navHeight;
+
+		background: $searchFormGradient;
+		font-size: calc($title * 3);
+		font-weight: 800;
+	}
+	#footer-container {
+		height: 75%;
+
+		flex-direction: column;
+		gap: max(0.25rem, 1.5vh);
+		background-color: $firstColor;
+
+		ul#footer-socials {
+			li.content-container {
+				aspect-ratio: 1 / 1;
+
+				a:first-child {
+					font-size: $title;
+				}
+			}
+		}
+		ul#footer-links {
+			li.content-container {
+				a {
+					font-size: $text;
+				}
+			}
+		}
+	}
+	#copyright {
+		background: $searchFormGradient;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+}

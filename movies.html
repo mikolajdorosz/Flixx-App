@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles/style.css" />
+		<link rel="icon" href="./img/flixx_icon.png" type="image/x-icon" />
+		<script
+			src="https://kit.fontawesome.com/3e8aed38ee.js"
+			crossorigin="anonymous"
+		></script>
+		<script type="module" src="./js/app.js" defer></script>
+		<title>Flixx</title>
+	</head>
+	<body>
+		<main class="content-container">
+			<div class="overlay"></div>
+			<div class="parallax-layer"></div>
+			<nav class="content-container">
+				<a
+					href="index.html"
+					id="nav-logo"
+					class="logo-link link content-container"
+				>
+					FLIXX
+				</a>
+				<ul id="nav-links" class="links-list content-container">
+					<li class="content-container">
+						<a
+							href="/movies.html?page=1"
+							id="nav-movies"
+							class="link content-container"
+						>
+							Movies
+						</a>
+					</li>
+					<li class="content-container">
+						<a
+							href="/tv-shows.html?page=1"
+							id="nav-tv"
+							class="link content-container"
+						>
+							TV Shows
+						</a>
+					</li>
+					<li class="content-container">
+						<a
+							href="/search.html?radio=movie&search-field=noInputProvided&page=1"
+							id="nav-search"
+							class="link content-container"
+							><i class="fa-solid fa-magnifying-glass"></i
+						></a>
+					</li>
+				</ul>
+			</nav>
+			<div class="switch-btns-container content-container">
+				<div class="more-btn link content-container">
+					<i class="fa-solid fa-angle-up"></i>
+				</div>
+				<div class="more-btn link content-container">
+					<i class="fa-solid fa-angle-down"></i>
+				</div>
+			</div>
+			<section
+				id="popular-movies-section"
+				class="top-section main-section content-container"
+				data-snap
+			>
+				<h1
+					id="popular-movies-title"
+					class="section-title content-container"
+				>
+					Popular Movies
+				</h1>
+				<div
+					id="popular-movies-container"
+					class="wrapper-container content-container"
+				>
+					<div
+						id="popular-movies-slider-container"
+						class="slider-container content-container"
+					></div>
+					<div class="slider-nav content-container">
+						<div
+							class="slider-left slider-arrow link content-container"
+						>
+							<i class="fa-solid fa-angle-left"></i>
+						</div>
+						<div
+							class="slider-right slider-arrow link content-container"
+						>
+							<i class="fa-solid fa-angle-right"></i>
+						</div>
+						<div
+							class="slider-btn content-container"
+							style="display: none"
+						></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div class="slider-btn content-container"></div>
+						<div
+							class="slider-btn content-container"
+							style="display: none"
+						></div>
+					</div>
+				</div>
+			</section>
+			<section class="break content-container"></section>
+			<section
+				id="discover-movies-section"
+				class="main-section content-container"
+				data-snap
+			>
+				<h1
+					id="discover-movies-title"
+					class="section-title content-container"
+				>
+					Discover Movies
+				</h1>
+				<div id="discover-movies-container" class="content-container">
+					<div class="wrapper-container content-container">
+						<div
+							id="discover-movies-grid-container"
+							class="grid-container"
+						></div>
+					</div>
+				</div>
+			</section>
+			<section class="pagination-section content-container">
+				<div class="page-container content-container">
+					<div
+						class="first-page page-btn section-title link content-container"
+					>
+						1
+					</div>
+					<div
+						class="previous-page page-btn more-btn section-title link content-container"
+					>
+						<i class="fa-solid fa-angle-left"></i>
+					</div>
+					<div class="current-page page-btn content-container"></div>
+					<div
+						class="next-page page-btn more-btn section-title link content-container"
+					>
+						<i class="fa-solid fa-angle-right"></i>
+					</div>
+					<div
+						class="last-page page-btn section-title link content-container"
+					>
+						500
+					</div>
+				</div>
+			</section>
+			<section class="break content-container"></section>
+			<footer class="content-container" data-snap>
+				<h1 id="footer-logo" class="content-container">FLIXX</h1>
+				<div id="footer-container" class="content-container">
+					<ul
+						id="footer-socials"
+						class="links-list content-container"
+					>
+						<li class="content-container">
+							<a
+								id="facebook"
+								class="logo-link link content-container"
+							>
+								<i class="fa-brands fa-facebook"></i>
+							</a>
+						</li>
+						<li class="content-container">
+							<a
+								id="instagram"
+								class="logo-link link content-container"
+							>
+								<i class="fa-brands fa-instagram"></i>
+							</a>
+						</li>
+						<li class="content-container">
+							<a
+								id="twitter"
+								class="logo-link link content-container"
+							>
+								<i class="fa-brands fa-twitter"></i>
+							</a>
+						</li>
+						<li class="content-container">
+							<a
+								id="youtube"
+								class="logo-link link content-container"
+							>
+								<i class="fa-brands fa-youtube"></i>
+							</a>
+						</li>
+					</ul>
+					<ul id="footer-links" class="links-list content-container">
+						<li class="content-container">
+							<a id="about" class="link content-container"
+								>About</a
+							>
+						</li>
+						<li class="content-container">
+							<a id="contact" class="link content-container"
+								>Contact</a
+							>
+						</li>
+						<li class="content-container">
+							<a
+								id="privacy-policy"
+								class="link content-container"
+								>Privacy policy</a
+							>
+						</li>
+						<li class="content-container">
+							<a id="help" class="link content-container">Help</a>
+						</li>
+					</ul>
+				</div>
+				<div id="copyright" class="info content-container">
+					&copy 2023 &copy Flixx. All rights reserved.
+				</div>
+			</footer>
+		</main>
+	</body>
+</html>

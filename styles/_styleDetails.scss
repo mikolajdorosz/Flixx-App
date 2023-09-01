@@ -1,0 +1,7 @@
+#movie-details-general-section::before,
+#tv-details-general-section::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: $generalInfoGradient;
+}

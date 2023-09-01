@@ -1,0 +1,64 @@
+.search-form {
+	height: auto;
+	width: 65%;
+
+	flex-direction: column;
+	position: relative;
+	font-size: $bigText;
+	gap: 2vh;
+
+	.radio-area {
+		height: 7vh;
+		border: 0.3vh solid $thirdColor;
+
+		label {
+			background-color: $transparentBackground;
+			color: $thirdColor;
+			text-transform: uppercase;
+			font-weight: 600;
+			cursor: pointer;
+		}
+		input:checked + label {
+			background-color: $thirdColor;
+			color: $firstColor;
+			font-weight: 800;
+		}
+	}
+	#search-area {
+		height: 7vh;
+		border: 0.3vh solid $thirdColor;
+		position: relative;
+
+		.search-field {
+			display: block;
+			height: 100%;
+			width: 100%;
+			padding: 0 5vw 0 1vw;
+
+			background-color: $transparentBackground;
+			color: $secondColor;
+
+			&:focus {
+				background-color: $firstColor;
+			}
+		}
+		.search-field:-webkit-autofill {
+			-webkit-box-shadow: 0 0 0 50px $firstColor inset;
+			-webkit-text-fill-color: $secondColor;
+		}
+		button {
+			padding: 0;
+			aspect-ratio: 1 / 1;
+
+			position: absolute;
+			right: 0;
+			color: $thirdColor;
+		}
+	}
+}
+
+#main-form-section,
+#search-page-form-section {
+	height: 50vh;
+	background: $searchFormGradient;
+}

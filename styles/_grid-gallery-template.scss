@@ -1,0 +1,86 @@
+.grid-container {
+	height: 100%;
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: repeat(4, calc(25% - 0.75vh));
+	grid-auto-rows: calc(
+		(100vh - 1vh - 3 * $mainSectionYPadding - $sectionTitleHeight) / 2
+	);
+	grid-gap: 1vh;
+
+	position: absolute;
+	inset: 0;
+	transition: transform 0.15s ease-out;
+
+	.hidden-grid-item {
+		border: 0 solid transparent;
+
+		flex-direction: column;
+		position: relative;
+		isolation: isolate;
+
+		background-position: center;
+		background-size: 140%;
+		transition: background-size 0.15s ease-out, border-color 0.3s ease-out;
+
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: radial-gradient(
+				rgba($color: $firstColor, $alpha: 0.75),
+				transparent
+			);
+			opacity: 0;
+			transition: opacity 0.15s ease-out;
+			z-index: 1;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(
+				to bottom,
+				$firstColor,
+				rgba($color: $firstColor, $alpha: 0.25),
+				$firstColor
+			);
+			z-index: -1;
+		}
+		&:hover {
+			background-size: 120%;
+			border: 1vh solid $thirdColor;
+
+			&::before {
+				opacity: 1;
+			}
+			& > .poster-img {
+				object-fit: cover;
+				scale: 1;
+			}
+			& > .title {
+				opacity: 1;
+			}
+		}
+		.poster-img {
+			object-fit: contain;
+			scale: 0.85;
+			transition: scale 0.15s ease-out, object-fit 0.15s ease-out;
+		}
+		.title {
+			height: 100%;
+			padding: 1em 2.5em;
+
+			position: absolute;
+			inset: 0;
+			z-index: 2;
+
+			font-size: $bigText;
+			text-align: center;
+			text-shadow: $textShadow;
+			opacity: 0;
+			transition: opacity 0.15s ease-out;
+		}
+	}
+}

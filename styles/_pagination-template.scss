@@ -1,0 +1,18 @@
+section.pagination-section {
+	height: auto;
+	padding: 0 $mainSectionXPadding $mainSectionYPadding $mainSectionXPadding;
+	background-color: $firstColor;
+
+	.page-container {
+		gap: 1vh;
+
+		.current-page {
+			width: 100%;
+			color: $thirdColor;
+			font-size: $bigText;
+			font-style: italic;
+			font-weight: 800;
+			text-transform: uppercase;
+		}
+	}
+}

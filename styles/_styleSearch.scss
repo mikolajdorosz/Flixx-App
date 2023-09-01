@@ -1,0 +1,14 @@
+#search-page-results-section {
+	height: auto;
+
+	#search-results-info {
+		justify-content: flex-start;
+	}
+	.wrapper-container {
+		margin-bottom: 0;
+
+		.grid-container {
+			position: static;
+		}
+	}
+}

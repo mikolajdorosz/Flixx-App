@@ -1,0 +1,113 @@
+@mixin RWD($font) {
+	$title: $font;
+	$sectionTitle: calc($title / 1.618);
+	$bigText: calc($sectionTitle / 1.618);
+	$text: calc($bigText / 1.2135);
+
+	// Classes
+	.section-title {
+		font-size: $sectionTitle !important;
+	}
+	.link {
+		font-size: $bigText !important;
+	}
+	.info {
+		font-size: $text !important;
+	}
+
+	// Navigation
+	#nav-logo {
+		font-size: $sectionTitle !important;
+	}
+
+	// Now playing
+	.gen-details-title {
+		font-size: $title !important;
+	}
+	.gen-details-genres {
+		font-size: $bigText !important;
+	}
+
+	// Form
+	label {
+		font-size: $bigText;
+	}
+	input.search-field {
+		font-size: $bigText;
+	}
+
+	// Slider
+	.slider-info {
+		font-size: calc($title * 2) !important;
+		line-height: calc($title * 1.6) !important;
+	}
+	.active-slide:hover .slider-info {
+		font-size: $title !important;
+		line-height: $title !important;
+	}
+	.slider-arrow {
+		font-size: $sectionTitle !important;
+	}
+	.more-btn {
+		font-size: $sectionTitle !important;
+	}
+
+	// Grid
+	.title {
+		font-size: $bigText !important;
+	}
+
+	// Pagination
+	.current-page {
+		font-size: $bigText !important;
+	}
+
+	// Footer
+	#footer-logo {
+		font-size: calc($title * 3) !important;
+	}
+	#footer-socials {
+		li {
+			a:first-child {
+				font-size: $title !important;
+			}
+		}
+	}
+	#footer-links {
+		li {
+			a {
+				font-size: $text !important;
+			}
+		}
+	}
+}
+
+@media (width <= 800px) {
+	$title: calc(2.9rem / 4);
+	@include RWD($title);
+}
+
+@media (width > 800px) and (width <= 1600px) {
+	$title: calc(2.9rem / 4 * 2);
+	@include RWD($title);
+}
+
+@media (width > 1600px) and (width <= 2400px) {
+	$title: calc(2.9rem);
+	@include RWD($title);
+}
+
+@media (width > 2400px) and (width <= 3200px) {
+	$title: calc(2.9rem / 4 * 6);
+	@include RWD($title);
+}
+
+@media (width > 3200px) and (width <= 4000px) {
+	$title: calc(2.9rem / 4 * 8);
+	@include RWD($title);
+}
+
+@media (width > 4000px) {
+	$title: calc(2.9rem / 4 * 10);
+	@include RWD($title);
+}

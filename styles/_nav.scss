@@ -1,0 +1,21 @@
+nav.content-container {
+	height: $navHeight;
+	min-width: 600px;
+	padding: 1vh $mainSectionXPadding;
+
+	position: fixed;
+	top: 0;
+	justify-content: space-between;
+
+	background: $firstColor;
+	transition: transform 0.25s ease-out;
+	z-index: 10;
+
+	ul#nav-links {
+		height: 100%;
+
+		#nav-search {
+			aspect-ratio: 1 / 1;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.switch-btns-container {
+	height: 100vh;
+	width: auto;
+	padding: 2vw;
+
+	position: fixed;
+	top: 0;
+	right: 0;
+	flex-direction: column;
+
+	background: linear-gradient(
+		to left,
+		rgba($color: $firstColor, $alpha: 0.75),
+		rgba($color: $firstColor, $alpha: 0.25)
+	);
+	transform: translateX(100%);
+	transition: transform 0.15s ease-out;
+	z-index: 20;
+
+	&:hover {
+		transform: translateX(0) !important;
+	}
+}

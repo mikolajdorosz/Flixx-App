@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles/style.css" />
+		<link rel="icon" href="./img/flixx_icon.png" type="image/x-icon" />
+		<script
+			src="https://kit.fontawesome.com/3e8aed38ee.js"
+			crossorigin="anonymous"
+		></script>
+		<script type="module" src="./js/app.js" defer></script>
+		<title>Flixx</title>
+	</head>
+	<body>
+		<main class="content-container">
+			<div class="overlay"></div>
+			<div class="parallax-layer"></div>
+			<nav class="content-container">
+				<a
+					href="index.html"
+					id="nav-logo"
+					class="logo-link link content-container"
+				>
+					FLIXX
+				</a>
+				<ul id="nav-links" class="links-list content-container">
+					<li class="content-container">
+						<a
+							href="/movies.html?page=1"
+							id="nav-movies"
+							class="link content-container"
+						>
+							Movies
+						</a>
+					</li>
+					<li class="content-container">
+						<a
+							href="/tv-shows.html?page=1"
+							id="nav-tv"
+							class="link content-container"
+						>
+							TV Shows
+						</a>
+					</li>
+					<li class="content-container">
+						<a
+							href="/search.html?radio=movie&search-field=noInputProvided&page=1"
+							id="nav-search"
+							class="link content-container"
+							><i class="fa-solid fa-magnifying-glass"></i
+						></a>
+					</li>
+				</ul>
+			</nav>
+			<div class="switch-btns-container content-container">
+				<div class="more-btn link content-container">
+					<i class="fa-solid fa-angle-up"></i>
+				</div>
+				<div class="more-btn link content-container">
+					<i class="fa-solid fa-angle-down"></i>
+				</div>
+			</div>
+			<section
+				id="search-page-form-section"
+				class="main-section content-container"
+				data-snap
+			>
+				<form
+					action="/search.html?page=1"
+					method="get"
+					class="search-form content-container"
+				>
+					<div class="radio-area content-container">
+						<input
+							type="radio"
+							name="radio"
+							value="movie"
+							id="search-movie"
+							class="radio-input"
+							checked
+						/>
+						<label for="search-movie" class="content-container">
+							Movies
+						</label>
+						<input
+							type="radio"
+							name="radio"
+							value="tv"
+							id="search-tv"
+							class="radio-input"
+						/>
+						<label for="search-tv" class="content-container">
+							TV Shows
+						</label>
+					</div>
+					<div id="search-area" class="content-container">
+						<input
+							type="text"
+							name="search-field"
+							placeholder="Search..."
+							class="search-field"
+						/>
+						<button type="submit" class="link content-container">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+					</div>
+					<input type="hidden" name="page" value="1" />
+				</form>
+			</section>
+			<section
+				id="search-page-results-section"
+				class="main-section content-container"
+				data-snap
+			>
+				<h1
+					id="search-results-info"
+					class="section-title content-container"
+				></h1>
+				<div id="search-page-container" class="content-container">
+					<div class="wrapper-container content-container">
+						<div
+							id="search-page-grid-container"
+							class="grid-container"
+						></div>
+					</div>
+				</div>
+			</section>
+			<section class="pagination-section content-container">
+				<div class="page-container content-container">
+					<div
+						class="first-page page-btn section-title link content-container"
+					>
+						1
+					</div>
+					<div
+						class="previous-page page-btn more-btn section-title link content-container"
+					>
+						<i class="fa-solid fa-angle-left"></i>
+					</div>
+					<div class="current-page page-btn content-container"></div>
+					<div
+						class="next-page page-btn more-btn section-title link content-container"
+					>
+						<i class="fa-solid fa-angle-right"></i>
+					</div>
+					<div
+						class="last-page page-btn section-title link content-container"
+					>
+						500
+					</div>
+				</div>
+			</section>
+			<section class="break content-container"></section>
+			<footer class="content-container" data-snap>
+				<h1 id="footer-logo" class="content-container">FLIXX</h1>
+				<div id="footer-container" class="content-container">
+					<ul
+						id="footer-socials"
+						class="links-list content-container"
+					>
+						<li class="content-container">
+							<a
+								id="facebook"
+								class="logo-link link content-container"
+							>
+								<i class="fa-brands fa-facebook"></i>
+							</a>
+						</li>
+						<li class="content-container">
+							<a
+								id="instagram"
+								class="logo-link link content-container"
+							>
+								<i class="fa-brands fa-instagram"></i>
+							</a>
+						</li>
+						<li class="content-container">
+							<a
+								id="twitter"
+								class="logo-link link content-container"
+							>
+								<i class="fa-brands fa-twitter"></i>
+							</a>
+						</li>
+						<li class="content-container">
+							<a
+								id="youtube"
+								class="logo-link link content-container"
+							>
+								<i class="fa-brands fa-youtube"></i>
+							</a>
+						</li>
+					</ul>
+					<ul id="footer-links" class="links-list content-container">
+						<li class="content-container">
+							<a id="about" class="link content-container"
+								>About</a
+							>
+						</li>
+						<li class="content-container">
+							<a id="contact" class="link content-container"
+								>Contact</a
+							>
+						</li>
+						<li class="content-container">
+							<a
+								id="privacy-policy"
+								class="link content-container"
+								>Privacy policy</a
+							>
+						</li>
+						<li class="content-container">
+							<a id="help" class="link content-container">Help</a>
+						</li>
+					</ul>
+				</div>
+				<div id="copyright" class="info content-container">
+					&copy 2023 &copy Flixx. All rights reserved.
+				</div>
+			</footer>
+		</main>
+	</body>
+</html>

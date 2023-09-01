@@ -1,0 +1,12 @@
+#discover-movies-section,
+#discover-tv-section {
+	height: auto;
+
+	.wrapper-container {
+		margin-bottom: 0;
+
+		.grid-container {
+			position: static;
+		}
+	}
+}

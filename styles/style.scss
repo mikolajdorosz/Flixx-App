@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+@import "./variables";
+@import "./classes";
+@import "./nav";
+@import "./footer";
+
+@import "./general-info-template";
+@import "./more-info-template";
+@import "./search-form-template";
+@import "./slider-template";
+@import "./grid-gallery-template";
+@import "./pagination-template";
+@import "./switch-btns";
+
+@import "./styleHome";
+@import "./styleDiscover";
+@import "./styleSearch";
+@import "./styleDetails";
+
+@import "./rwd";
+
+::-webkit-scrollbar {
+	width: 0.6vw;
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgba($color: $secondColor, $alpha: 0.5);
+	&:active {
+		background-color: rgba($color: $secondColor, $alpha: 1);
+	}
+}
+::-webkit-scrollbar-track {
+	background-color: $firstColor;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-width: 500px;
+	background-color: $firstColor;
+	font-family: $fontFam;
+	overflow: hidden;
+}
+
+main {
+	position: relative;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+button {
+	all: unset;
+}
+input {
+	all: unset;
+	appearance: none;
+	box-sizing: border-box;
+}

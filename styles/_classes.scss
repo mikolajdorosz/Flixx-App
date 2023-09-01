@@ -1,0 +1,130 @@
+.overlay {
+	height: 100%;
+	width: 100%;
+
+	position: absolute;
+	inset: 0;
+
+	background-color: black;
+	opacity: 1;
+	transition: opacity 0.5s ease-out;
+	overflow: hidden;
+	z-index: 20;
+}
+.parallax-layer {
+	height: 100%;
+	width: 100%;
+
+	position: absolute;
+	inset: 0;
+	background: url("../img/flixx_background.png") repeat center / 120%;
+	z-index: -10;
+}
+.content-container {
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.break {
+	height: 25vh !important;
+	background-color: transparent !important;
+}
+.main-section {
+	height: calc(100vh - $navHeight);
+	padding: $mainSectionYPadding $mainSectionXPadding;
+
+	position: relative;
+	flex-direction: column;
+
+	background-color: $firstColor;
+	transition: height 0.5s ease-in-out, background-color 1s ease-out,
+		transform 0.3s ease-out, opacity 0.5s ease-out;
+}
+.top-section {
+	height: 100vh;
+	padding-top: calc($navHeight + $mainSectionYPadding);
+}
+.wrapper-container {
+	margin: $mainSectionYPadding 0;
+	position: relative;
+	transform: translate(0);
+}
+.section-title {
+	height: $sectionTitleHeight;
+
+	color: $thirdColor;
+	font-style: italic;
+	font-size: $sectionTitle;
+	font-weight: 800 !important;
+	text-transform: uppercase;
+	letter-spacing: 0.075rem;
+}
+.link {
+	width: auto;
+	padding: max(0.25rem, 1.5vh) max(0.5rem, 1vw);
+
+	color: $secondColor;
+	font-size: $bigText;
+	font-weight: 500;
+	white-space: nowrap;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $thirdColor;
+		color: $firstColor !important;
+	}
+}
+.logo-link {
+	font-size: $sectionTitle;
+	font-weight: 800 !important;
+
+	&:hover {
+		color: $thirdColor !important;
+		background-color: transparent !important;
+	}
+}
+.more-btn {
+	height: $sectionTitleHeight !important;
+	font-size: $sectionTitle;
+}
+.links-list {
+	height: auto;
+	width: auto;
+	gap: 1vh;
+}
+.info {
+	height: auto;
+	padding: max(2vh, 0.5em) max(2vw, 1em);
+
+	color: $secondColor;
+	font-size: $text;
+	text-align: justify;
+	overflow: hidden;
+}
+.no-results {
+	height: 7vh;
+	width: 25vw;
+	position: absolute;
+	inset: -9vh 50%;
+	background-color: darkred;
+	transform: translateX(-50%);
+}
+.error-body {
+	height: 100vh;
+	width: 100vw;
+
+	.error-msg {
+		text-align: center;
+	}
+}
+.full-height {
+	height: 100vh !important;
+}
+.results-height {
+	height: calc(
+		100vh - (2 * $mainSectionYPadding) - $sectionTitleHeight
+	) !important;
+}

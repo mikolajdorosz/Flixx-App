@@ -1,0 +1,45 @@
+.gen-details-item {
+	max-height: calc(
+		100vh - $navHeight - 4 * $mainSectionYPadding - $sectionTitleHeight
+	);
+	position: relative;
+
+	img.gen-details-poster {
+		height: 100%;
+	}
+	.gen-details-info {
+		padding: $mainSectionYPadding;
+
+		flex-direction: column;
+		justify-content: space-between;
+		background: linear-gradient(
+			to right,
+			rgba($color: $firstColor, $alpha: 0.75),
+			transparent,
+			transparent
+		);
+
+		.gen-top-info {
+			height: auto;
+			flex-direction: column;
+
+			.gen-details-title {
+				height: auto;
+				color: $secondColor;
+				font-size: $title;
+			}
+			.gen-details-overview {
+				margin: calc($mainSectionYPadding / 2) 0;
+			}
+		}
+		.gen-details-genres {
+			color: $thirdColor;
+		}
+		.gen-details-title,
+		.gen-details-overview,
+		.gen-details-genres {
+			padding: 0;
+			justify-content: flex-start;
+		}
+	}
+}

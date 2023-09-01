@@ -1,0 +1,61 @@
+$navHeight: 8vh;
+$mainSectionYPadding: 4.6vh;
+$mainSectionXPadding: 15vw;
+$sectionTitleHeight: 3.7vh;
+
+$fontFam: "Open Sans", sans-serif;
+
+$firstColor: black;
+$secondColor: white;
+$thirdColor: #f1c40f;
+
+$generalInfoGradient: linear-gradient(
+	to bottom,
+	rgba(
+		$color: $firstColor,
+		$alpha: 1,
+	),
+	rgba(
+		$color: $firstColor,
+		$alpha: 0.5,
+	),
+	rgba(
+		$color: $firstColor,
+		$alpha: 1,
+	)
+);
+$searchFormGradient: radial-gradient(
+	rgba(
+		$color: $firstColor,
+		$alpha: 0.2,
+	),
+	transparent,
+	transparent
+);
+$transparentBackground: rgba(
+	$color: $firstColor,
+	$alpha: 0.75,
+);
+$textShadow: rgba(
+			$color: $firstColor,
+			$alpha: 0.25,
+		)
+		0.3vh 0.3vh 5vh,
+	rgba(
+			$color: $firstColor,
+			$alpha: 0.25,
+		) -0.3vh -0.3vh 5vh,
+	rgba(
+			$color: $firstColor,
+			$alpha: 0.25,
+		)
+		0.3vh -0.3vh 5vh,
+	rgba(
+			$color: $firstColor,
+			$alpha: 0.25,
+		) -0.3vh 0.3vh 5vh;
+
+$title: 2.9rem;
+$sectionTitle: calc($title / 1.618);
+$bigText: calc($sectionTitle / 1.618);
+$text: calc($bigText / 1.2135);

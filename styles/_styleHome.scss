@@ -1,0 +1,65 @@
+#now-playing-section {
+	isolation: isolate;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: $generalInfoGradient;
+		backdrop-filter: blur(0.1vh);
+	}
+	#now-playing-title {
+		z-index: 1;
+	}
+	.progress-bar {
+		height: 0.75vh;
+		width: 0;
+		max-width: 100%;
+
+		position: absolute;
+		top: $navHeight;
+		left: 0;
+
+		background-color: $thirdColor;
+		opacity: 0;
+		transition: opacity 0.5s ease-out;
+	}
+	.wrapper-container {
+		margin-bottom: 0;
+		overflow: hidden;
+
+		#now-playing-container {
+			width: calc(100% * 20);
+
+			position: absolute;
+			inset: 0;
+
+			transition: opacity 0.25s ease-out;
+		}
+	}
+	.backdrop-container {
+		width: calc(100% * 20);
+		position: absolute;
+		inset: 0;
+		overflow: hidden;
+		z-index: -1;
+		transition: opacity 0.5s ease-out;
+
+		.backdrop {
+			width: calc(100% / 20);
+		}
+	}
+}
+
+#trending-movies-grid-container-wrapper,
+#trending-tv-grid-container-wrapper {
+	margin-top: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: opacity 0.15s ease-out;
+}
+
+.more-btns-wrapper {
+	height: $sectionTitleHeight;
+	opacity: 0;
+}

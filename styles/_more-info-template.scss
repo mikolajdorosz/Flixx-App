@@ -1,0 +1,39 @@
+.more-info-section {
+	height: auto;
+
+	.more-info-container {
+		flex-direction: column;
+
+		.details-tile {
+			border-bottom: 0.3vh solid $firstColor;
+			border-image: linear-gradient(
+					to right,
+					rgba($color: $thirdColor, $alpha: 0.75),
+					rgba($color: $thirdColor, $alpha: 0.25),
+					transparent,
+					rgba($color: $secondColor, $alpha: 0.25),
+					rgba($color: $secondColor, $alpha: 0.75)
+				)
+				1;
+			justify-content: space-between;
+
+			.details-name {
+				height: auto;
+				width: auto;
+
+				opacity: 0.75;
+				font-size: $title;
+				white-space: nowrap;
+				-webkit-text-fill-color: transparent;
+				-webkit-text-stroke: 0.1vh;
+			}
+			.details-value {
+				width: auto;
+				padding-right: max(0.5rem, 1vw);
+
+				text-align: right;
+				white-space: pre-line;
+			}
+		}
+	}
+}
