@@ -83,12 +83,12 @@
 }
 
 @media (width <= 800px) {
-	$title: calc(2.9rem / 4);
+	$title: calc(2.9rem / 4 * 2);
 	@include RWD($title);
 }
 
 @media (width > 800px) and (width <= 1600px) {
-	$title: calc(2.9rem / 4 * 2);
+	$title: calc(2.9rem / 4 * 3);
 	@include RWD($title);
 }
 
